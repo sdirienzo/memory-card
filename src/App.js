@@ -1,10 +1,10 @@
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Header title='Attack on Titan Memory Game' currentScore='0' highScore='0' />
     </div>
   );
 }

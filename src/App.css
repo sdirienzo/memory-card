@@ -1,7 +1,18 @@
-.App {
-
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
+html {
+    box-sizing: border-box;
+}
 
+.App {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    min-height: 100vh;
+    padding: 35px 50px;
+    background-color: #18181b;
 }

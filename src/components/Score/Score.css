@@ -8,5 +8,6 @@
 
 .Score-label,
 .Score-score {
+    font-size: 1.75rem;
     font-family: 'Russo One', sans-serif;
 }

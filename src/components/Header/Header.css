@@ -1,5 +1,15 @@
-.Header-container {
+@import '../../assets/fonts/fonts.css';
+
+.Header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    row-gap: 20px;
+}
+
+.Header-title {
+    font-size: 3rem;
+    font-family: 'Russo One', sans-serif;
+    color: white;
 }

@@ -94,12 +94,44 @@ function App() {
             selected: false
         }
     ]
-);
+  );
+  
+  const handleSelection = (id) => {
+    const index = cards.findIndex(card => card.id === id);
+    const card = cards[index];
+    const newCards = [...cards];
+
+    if (card.selected) {
+      resetGame();
+      return;
+    }
+
+    setScore(score + 1);
+    card.selected = true;
+    newCards[index] = card;
+    setCards(newCards);
+  }
+
+  const resetCards = () => {
+    const newCards = cards.map(card => {
+      card.selected = false;
+      return card;
+    });
+    setCards(newCards);
+  }
+
+  const resetGame = () => {
+    if (score > highScore) {
+      setHighScore(score);
+    }
+    setScore(0);
+    resetCards();
+  }
 
   return (
     <div className="App">
       <Header title='Attack on Titan Memory Game' currentScore={score} highScore={highScore} />
-      <Cards cards={cards} />
+      <Cards cards={cards} onSelection={handleSelection} />
     </div>
   );
 }

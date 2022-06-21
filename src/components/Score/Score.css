@@ -1,4 +1,12 @@
+@import '../../assets/fonts/fonts.css';
+
 .Score {
     display: flex;
     column-gap: 5px;
+    color: white;
+}
+
+.Score-label,
+.Score-score {
+    font-family: 'Russo One', sans-serif;
 }
